@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Fronted Framework</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Quando:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic%7CJosefin+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' type='text/css' media='all' />
+  <link rel="stylesheet" href="/assets/css/stylesheet.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .sidebar {
+      background-color: #363740;
+      min-height: 100vh;
+      color: #fff;
+    }
+    .sidebar a {
+      color: #a0aec0;
+    }
+    .card {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 d-none d-md-block sidebar py-3">
+        <div class="sidebar-sticky">
+          <h4 class="text-light px-3">Dashboard Kit</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ideas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Agents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Subscription</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <h2 class="my-4">Overview</h2>
+        
+        <!-- Top Stats -->
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h4>Unresolved</h4>
+              <p class="display-4">60</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h4>Overdue</h4>
+              <p class="display-4">16</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h4>Open</h4>
+              <p class="display-4">43</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card text-center p-3">
+              <h4>On hold</h4>
+              <p class="display-4">64</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trends Chart and Resolved Info -->
+        <div class="row mb-4">
+          <div class="col-md-8">
+            <div class="card p-3">
+              <h5>Today's trends</h5>
+              <div class="chart-placeholder" style="height: 250px; background: #f0f2f5; text-align: center; line-height: 250px;">
+                Chart Placeholder
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5>Statistics</h5>
+              <ul class="list-unstyled">
+                <li>Resolved: <strong>449</strong></li>
+                <li>Received: <strong>426</strong></li>
+                <li>Average first response time: <strong>33m</strong></li>
+                <li>Average response time: <strong>3h 8m</strong></li>
+                <li>Resolution within SLA: <strong>94%</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unresolved Tickets and Tasks -->
+        <div class="row mb-4">
+          <div class="col-md-8">
+            <div class="card p-3">
+              <h5>Unresolved Tickets</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Waiting on Feature Request
+                  <span class="badge badge-primary badge-pill">4238</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Awaiting Customer Response
+                  <span class="badge badge-primary badge-pill">1005</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Awaiting Developer Fix
+                  <span class="badge badge-primary badge-pill">914</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Pending
+                  <span class="badge badge-primary badge-pill">281</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5>Tasks</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Finish ticket update
+                  <span class="badge badge-warning">Urgent</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Create new ticket example
+                  <span class="badge badge-success">New</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Update ticket report
+                  <span class="badge badge-secondary">Default</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  
+</body>
+</html>
