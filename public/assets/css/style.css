@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/* styles.css */
+
+/* Mobile version */
+.container-sm {
+    padding: 15px; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card Styling */
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: 1px solid #dcdcdc;
+    margin-bottom: 15px; 
+    padding: 10px; 
+    text-align: center; 
+  }
+  #top-cards{
+    display: flex;
+    
+  }
+  .card h4 {
+    font-size: 0.9rem; 
+    color: #a09f9f;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    margin: 0;
+  }
+
+  
+/* Graph and Card Styling */
+
+/* Ensure the graph takes the full container width */
+.content-graph {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    width: 100%;
+    gap: 0; /* Remove unnecessary space between graph and cards */
+    border-radius: 8px;
+
+    overflow: hidden; /* Ensure no overflow issues */
+  }
+  
+  /* Graph styling */
+  .graph {
+    flex: 1; /* Take up the remaining space */
+    height: auto; /* Ensure responsiveness */
+
+
+  }
+  
+  .graph img {
+    width: 100%; /* Ensure the graph spans the full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove spacing issues */
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Cards below the graph */
+  .card-group {
+    flex: 1; /* Take up the remaining space, same as the graph */
+    display: flex;
+    flex-direction: row; /* Align cards horizontally */
+    justify-content: space-between; /* Space cards evenly */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    padding: 10px 0;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+
+
+  }
+  
+  .card-graph {
+
+    flex: 1 1 20%; /* Flexible width for each card */
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #cdced3;
+        padding: 15px;
+
+  }
+  
+  .card-graph h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0;
+  }
+  
+  .card-graph p {
+    font-size: 0.9rem;
+    color: #9fa2b4;
+    margin: 0;
+  }
+  
+  /* Sidebar Styling */
+  #logo {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+    gap: 10px; /* Add spacing between the logo and the text */
+  }
+  
+  .sidebar-logo {
+    width: 24px; /* Slightly larger for visibility on mobile */
+    height: 24px;
+  }
+  
+  .sidebar-sticky h4 {
+    font-size: 0.9rem;
+    color: #6f6e6e;
+    margin: 0;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .sidebar a {
+    font-size: 0.85rem; /* Smaller font size for mobile */
+    padding: 8px 10px; /* Reduce padding for compact sidebar links */
+    display: block;
+    color: #a0aec0;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    color: #ffffff;
+    background-color: #505050; /* Highlight on hover */
+  }
+  
+  /* Chart Placeholder */
+  .chart-placeholder img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 15px; /* Add spacing for clarity */
+  }
+  
+  /* Accessibility Enhancements */
+  .chart-placeholder img {
+    display: block;
+    margin: 0 auto; /* Center images on mobile */
+  }
+  
+  /* Unresolved Tickets and Tasks List */
+  .list-group-item {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .badge {
+    font-size: 0.8rem;
+    padding: 5px 8px; /* Compact badges for mobile */
+    border-radius: 0.3em;
+  }
+  
