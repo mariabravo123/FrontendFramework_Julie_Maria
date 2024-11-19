@@ -24,19 +24,27 @@
     .card {
       border: none;
     }
+    body {
+      background-color: #edf1f7; /* Set the desired body background color */
+    }
   </style>
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="row">
-      <!-- Sidebar -->
+      <!-- Sidebar: Dashboard Kit -->
       <nav class="col-md-2 d-none d-md-block sidebar py-3">
         <div class="sidebar-sticky">
-          <h4 class="text-light px-3">Dashboard Kit</h4>
+            <div id="logo">
+            <img src="/assets/images/logo.png" alt="Logo" class="sidebar-logo me-2">
+            <h4 class="text-light px-3">Dashboard Kit</h4>
+            </div>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Overview</a>
+              <a class="nav-link active" href="#">
+                <i class="bi bi-pie-chart-fill"></i> Overview
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -78,58 +86,84 @@
       </nav>
 
       <!-- Main Content -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4
+
+      ">
         <h2 class="my-4">Overview</h2>
         
-        <!-- Top Stats -->
-        <div class="row mb-4">
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h4>Unresolved</h4>
-              <p class="display-4">60</p>
+        <!-- Top Stats/ containers -->
+        <div class="container-sm mb-4" id="top-cards">
+          <div class="row">
+            <!-- Unresolved Container-->
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h4>Unresolved</h4>
+                <p class="display-4">60</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h4>Overdue</h4>
-              <p class="display-4">16</p>
+      
+            <!-- Overdue container -->
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h4>Overdue</h4>
+                <p class="display-4">16</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h4>Open</h4>
-              <p class="display-4">43</p>
+      
+            <!-- Open Container -->
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h4>Open</h4>
+                <p class="display-4">43</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-center p-3">
-              <h4>On hold</h4>
-              <p class="display-4">64</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trends Chart and Resolved Info -->
-        <div class="row mb-4">
-          <div class="col-md-8">
-            <div class="card p-3">
-              <h5>Today's trends</h5>
-              <div class="chart-placeholder" style="height: 500px; text-align: center;">
-                <img src="/assets/images/fullgraph.png" alt="Chart Image" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+      
+            <!-- On Hold Container -->
+            <div class="col-md-3">
+              <div class="card text-center p-3">
+                <h4>On hold</h4>
+                <p class="display-4">64</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card p-3">
-              <ul class="list-unstyled">
-                <li>
-                  <img src="/assets/images/additionalinfo.png" alt="Resolved" style="max-width: 100%; height: auto;">
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
+        
 
+        <!-- Today's trends -->
+        <section class="row graph">
+          <div class="container-fluid content-graph">
+
+            <section class="row content-graph">
+              <!-- Full-width graph -->
+              <div class="col-12 graph">
+                <img src="./assets/images/fullgraph.png" alt="Full Graph">
+              </div>
+            
+              <!-- Cards matching graph width -->
+              <div class="col-12 card-group">
+                <div class="card-graph">
+                  <p>Resolved</p>
+                  <h3>449</h3>
+                </div>
+                <div class="card-graph">
+                  <p>Received</p>
+                  <h3>426</h3>
+                </div>
+                <div class="card-graph">
+                  <p>Average first response time</p>
+                  <h3>33m</h3>
+                </div>
+                <div class="card-graph">
+                  <p>Average response time</p>
+                  <h3>3h 8m</h3>
+                </div>
+                <div class="card-graph">
+                  <p>Resolution within SLA</p>
+                  <h3>94%</h3>
+                </div>
+              </div>
+            </section>
+            
         <!-- Unresolved Tickets and Tasks -->
         <div class="row mb-4">
           <div class="col-md-8">
